@@ -1,0 +1,81 @@
+#root {
+  padding: 0;
+  overflow: hidden;
+}
+#store {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.box {
+  position: absolute;
+  top: 30vw;
+  left: 19vw;
+  width: 20vw;
+  margin-bottom: 40vh;
+
+}
+.store {
+  overflow: hidden;
+  animation: zoom-in-zoom-out 1.5s ease-in 1;
+  transform: scale(20);
+  z-index: 100;
+}
+.hidden {
+  visibility: hidden;
+}
+
+img {
+  width: 100%;
+}
+#small-box {
+  z-index: 10;
+}
+#big-box {
+  z-index: -10;
+  width: 100%;
+  animation: make-big 1.5s ease-in 1;
+  top: -99vw;
+}
+@keyframes make-big {
+  0% {
+    top: 30vw;
+    z-index: 10;
+  }
+  50% {
+    transform: rotate(90deg);
+    top: 10vw;
+    z-index: 10;
+  }
+  100% {
+    top: -50vw;
+    transform: rotate(90);
+    z-index: 10;
+
+  }
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(10);
+  }
+  100% {
+    transform: scale(20);
+  }
+
+}
+
+#box-bottom {
+  background-color: blue;
+  background: url('https://s3.us-west-1.amazonaws.com/tijana.me/box.webp');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 2px solid black;
+  height: 16vw;
+  
+}
