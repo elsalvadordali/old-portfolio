@@ -1,16 +1,14 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import Store from './Store'
-import Box from './Box'
+import Window1 from './houses/Window1'
 import './App.css'
+import Building from './houses/Building'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Box />
-      <Store />
+      <Building />
     </>
   )
 }
